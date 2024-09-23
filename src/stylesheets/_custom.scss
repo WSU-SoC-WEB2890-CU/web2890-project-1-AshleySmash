@@ -1,0 +1,53 @@
+@import "bootstrap/scss/bootstrap.scss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+$primary-color: #f7931e;
+$secondary-color: #34495e;
+$accent-color: #1abc9c;
+$neutral-color: white;
+$dark-secondary: #7f8c8d;
+$light-secondary: #ecf0f1;
+
+$offcanvas-bg: $secondary-color;
+$offcanvas-color: $neutral-color;
+
+@mixin button-style($bg-color, $hover-color, $active-color) {
+  background-color: $bg-color;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+  &:active {
+    background-color: $active-color;
+  }
+}
+
+@mixin card-style($bg-color, $shadow-color) {
+  background-color: $bg-color;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba($shadow-color, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba($shadow-color, 0.15);
+  }
+}
+
+.offcanvas {
+  background-color: $offcanvas-bg !important;
+  color: $offcanvas-color;
+}
+
+.dropdown-menu {
+  background-color: darken($offcanvas-bg, 10%) !important;
+  color: $offcanvas-color;
+}
+
+.btn-close {
+  color: $offcanvas-color;
+}

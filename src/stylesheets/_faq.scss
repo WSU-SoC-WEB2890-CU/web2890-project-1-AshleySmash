@@ -1,0 +1,36 @@
+@import "./_custom.scss";
+
+.faqs {
+  .accordion-item {
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+
+    .accordion-button {
+      background-color: lighten($secondary-color, 60%);
+      border-radius: 1rem 1rem 0 0;
+      padding: 1rem;
+      border: none;
+      transition: background-color 0.3s ease;
+
+      &:not(.collapsed) {
+        background-color: lighten($secondary-color, 50%);
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .accordion-body {
+    background-color: $light-secondary;
+    color: $secondary-color;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    @include button-style($primary-color, darken($primary-color, 10%), darken($primary-color, 25%));
+  }
+}
