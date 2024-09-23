@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Content</title>
   </head>
   <body>
     <h1>APPENDIX: Cardeal page content</h1>
-    <p>NOTE: Below are the contents of the various sections of the cardeal page in HTML format. You can change the HTML code of any or all of these sections to whatever fit your design and implemenation.</p> 
+    <p>
+      NOTE: Below are the contents of the various sections of the cardeal page in HTML format. You can change the HTML
+      code of any or all of these sections to whatever fit your design and implemenation.
+    </p>
     <p><a href="/">Back to the one-page index.html</a></p>
     <section>
       <h2>The Header/Navbar section</h2>
       <img src="images/logo.svg" alt="cardeal logo" />
-      <ul>
+      <ul class="navbar">
         <li><a href="#">Home</a></li>
         <li><a href="#">How It Works</a></li>
         <li><a href="#">About Us</a></li>
@@ -21,19 +25,23 @@
         <li><a href="#">FAQs</a></li>
       </ul>
       <h2>The Hero (jumbotron) section</h2>
-      <h3>Left side</h3>
-      <p>We buy "any" car.</p>
-      <p>Get Your Free Online Valuation Now!</p>
-      
-      <h3>Right side</h3>
-      <p>Add a form with four input boxes with placeholders sayting:</p>
-      <ul>
-        <li>Enter VIN</li>
-        <li>select Year</li>
-        <li>Select Make</li>
-        <li>Select Model</li>
-      </ul>
-      <p><button>Get an Offer</button></p>
+      <section class="hero">
+        <div class="hero-left">
+          <h3>Left side</h3>
+          <p>We buy "any" car.</p>
+          <p>Get Your Free Online Valuation Now!</p>
+        </div>
+        <div class="hero-right">
+          <h3>Right side</h3>
+          <form>
+            <input type="text" placeholder="Enter VIN" />
+            <input type="text" placeholder="Select Year" />
+            <input type="text" placeholder="Select Make" />
+            <input type="text" placeholder="Select Model" />
+            <button>Get an Offer</button>
+          </form>
+        </div>
+      </section>
     </section>
     <section>
       <h2>The How It Works section</h2>
@@ -147,68 +155,72 @@
     </section>
 
     <section>
-      <p><strong>Toyota 4-Runner</strong></p>
-      <img src="images/toyota_4runner.png" alt="Toyota 4-Runner" />
-      <p>2001</p>
-      <p>179,000 miles</p>
-      <p>$6,500</p>
-      <p>Full Style: 4dr SR5 3.4L Auto</p>
-      <p>Condition: 4 stars</p>
-      <p>Fuel Economy: 17mpg city, 20mpg hw</p>
-      <p>
-        Description: I am the 2nd owner of this car just under 7 years ago. Original owner was a police officer who
-        really maintained it well. Reason for selling just upgraded to a 2017 4X4 for future endeavors.If you're looking
-        for a work horse, this is it.
-      </p>
-      <p><strong>Ford Fusion</strong></p>
-      <img src="images/ford_fusion.png" alt="Ford Fusion" />
-      <p>2010</p>
-      <p>59,000 miles</p>
-      <p>$8,919</p>
-      <p>Full Style: 4dr Sedan SE FWD</p>
-      <p>Condition: 5 stars</p>
-      <p>Fuel Economy: 22mpg city, 31mpg hw</p>
-      <p>
-        Description: Vehicle is low miles and in excellent shape&hellip;has only been driven locally in the past 2
-        years. I was a former Ford employee and the vehicle has been taken care of great. It has tinted windows,
-        interior is spotless. Great first car!
-      </p>
-      <p><strong>Honda Civic</strong></p>
-      <img src="images/honda_civic_sedan.png" alt="Honda Civic" />
-      <p>2013</p>
-      <p>131,092 miles</p>
-      <p>$7,900</p>
-      <p>Full Style: 4dr Sedan Auto LX FWD</p>
-      <p>Condition: 3 stars</p>
-      <p>Fuel Economy: 28mpg city, 39mpg hw</p>
-      <p>
-        Description: Been my commuter since 2014, stereo replaced with a Boss unit with android auto and apple carplay
-        along with speakers. Been very reliable but need larger vehicle for growing family.
-      </p>
-      <p><strong>Ford F-150 Truck</strong></p>
-      <img src="images/ford_f150_truck.png" alt="Ford F-150 Truck" />
-      <p>2014</p>
-      <p>140,000 miles</p>
-      <p>$9,999</p>
-      <p>Full Style: 2WD Reg Cab 145" XL</p>
-      <p>Condition: 5 stars</p>
-      <p>Fuel Economy: 17mpg city, 23mpg hw</p>
-      <p>
-        Description: Truck in good condition, no warning lights showing, great exhaust, 9/32 tire tread depth, full-size
-        spare tire stored underbody.
-      </p>
-      <p><strong>Hyundai Elantra</strong></p>
-      <img src="images/hyundai_elantra.png" alt="Hyundai Elantra" />
-      <p><span>2011</span></p>
-      <p><span>113,325 miles</span></p>
-      <p><span>$6,995</span></p>
-      <p><span>Full Style:&nbsp; 4dr Sedan Auto GLS</span></p>
-      <p>Condition: 4 stars</p>
-      <p>Fuel Economy: 28mpg city, 38mpg hw</p>
-      <p>
-        Description: Car is in great condition; runs smooth, clean inside and out. Recently completed a tune up, oil
-        change, replaced all 4 tires.
-      </p>
+      <section class="recent-purchases">
+        <div class="card">
+          <img src="images/toyota_4runner.png" alt="Toyota 4-Runner" />
+          <p><strong>Toyota 4-Runner</strong></p>
+          <p>2001 | 179,000 miles | $6,500</p>
+        </div>
+        <p>Full Style: 4dr SR5 3.4L Auto</p>
+        <p>Condition: 4 stars</p>
+        <p>Fuel Economy: 17mpg city, 20mpg hw</p>
+        <p>
+          Description: I am the 2nd owner of this car just under 7 years ago. Original owner was a police officer who
+          really maintained it well. Reason for selling just upgraded to a 2017 4X4 for future endeavors.If you're
+          looking for a work horse, this is it.
+        </p>
+        <div class="card">
+          <img src="images/ford_fusion.png" alt="Ford Fusion" />
+          <p><strong>Ford Fusion</strong></p>
+          <p>2010 | 59,000 miles | $8,919</p>
+        </div>
+        <p>Full Style: 4dr Sedan SE FWD</p>
+        <p>Condition: 5 stars</p>
+        <p>Fuel Economy: 22mpg city, 31mpg hw</p>
+        <p>
+          Description: Vehicle is low miles and in excellent shape&hellip;has only been driven locally in the past 2
+          years. I was a former Ford employee and the vehicle has been taken care of great. It has tinted windows,
+          interior is spotless. Great first car!
+        </p>
+        <div class="card">
+          <img src="images/honda_civic_sedan.png" alt="Honda Civic" />
+          <p><strong>Honda Civic</strong></p>
+          <p>2013 | 131,092 miles | $7,900</p>
+        </div>
+        <p>Full Style: 4dr Sedan Auto LX FWD</p>
+        <p>Condition: 3 stars</p>
+        <p>Fuel Economy: 28mpg city, 39mpg hw</p>
+        <p>
+          Description: Been my commuter since 2014, stereo replaced with a Boss unit with android auto and apple carplay
+          along with speakers. Been very reliable but need larger vehicle for growing family.
+        </p>
+
+        <div class="card">
+          <img src="images/ford_f150_truck.png" alt="Ford F-150 Truck" />
+          <p><strong>Ford F-150 Truck</strong></p>
+          <p>2014 | 140,000 miles | $9,999</p>
+        </div>
+        <p>Full Style: 2WD Reg Cab 145" XL</p>
+        <p>Condition: 5 stars</p>
+        <p>Fuel Economy: 17mpg city, 23mpg hw</p>
+        <p>
+          Description: Truck in good condition, no warning lights showing, great exhaust, 9/32 tire tread depth,
+          full-size spare tire stored underbody.
+        </p>
+
+        <div class="card">
+          <img src="images/hyundai_elantra.png" alt="Hyundai Elantra" />
+          <p><strong>Hyundai Elantra</strong></p>
+          <p>2011 | 113,325 miles | $6,995</p>
+        </div>
+        <p><span>Full Style:&nbsp; 4dr Sedan Auto GLS</span></p>
+        <p>Condition: 4 stars</p>
+        <p>Fuel Economy: 28mpg city, 38mpg hw</p>
+        <p>
+          Description: Car is in great condition; runs smooth, clean inside and out. Recently completed a tune up, oil
+          change, replaced all 4 tires.
+        </p>
+      </section>
     </section>
     <section>
       <h2>The FAQs (Frequently Asked Questions) section</h2>
@@ -254,12 +266,21 @@
       </address>
       <p><strong>Social Media Links</strong></p>
 
-      <ul>
-        <li><a href="#"></a>Facebook</li>
-        <li><a href="#"></a>Linked In</li>
-        <li><a href="#"></a>Twitter</li>
-        <li><a href="#"></a>YouTube</li>
+      <ul class="social-links">
+        <li>
+          <a href="#"><i class="fa fa-facebook"></i> Facebook</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-linkedin"></i> Linked In</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-youtube"></i> YouTube</a>
+        </li>
       </ul>
+
       <p>
         <strong>Additional Links</strong>
       </p>
@@ -272,7 +293,8 @@
       </ul>
 
       <p>
-        <span>&copy;</span><span>2021 All rights reserved. <a href="#">Privacy Policy</a> <a href="#">Terms of Use</a></span>
+        <span>&copy;</span
+        ><span>2021 All rights reserved. <a href="#">Privacy Policy</a> <a href="#">Terms of Use</a></span>
       </p>
     </section>
   </body>

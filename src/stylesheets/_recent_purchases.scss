@@ -1,0 +1,44 @@
+@import "./_custom.scss";
+
+.recent-purchases {
+  background-color: $light-secondary;
+  padding: 4rem 0;
+  position: relative;
+
+  h2 {
+    font-size: 2.5rem;
+    color: $secondary-color;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    @include card-style($light-secondary, $secondary-color);
+
+    .card-img-top {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    .card-body {
+      color: $secondary-color;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    .card-text {
+      font-size: 1.1rem;
+    }
+
+    .card-description {
+      font-size: 0.9rem;
+      color: $dark-secondary;
+    }
+
+    .btn-primary {
+      @include button-style($primary-color, darken($primary-color, 10%), darken($primary-color, 25%));
+    }
+  }
+}

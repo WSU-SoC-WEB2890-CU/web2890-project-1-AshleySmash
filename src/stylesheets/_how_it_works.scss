@@ -1,0 +1,83 @@
+@import "./_custom.scss";
+
+.how-it-works {
+  padding: 50px 0;
+  background-color: $light-secondary;
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: $secondary-color;
+    margin-bottom: 20px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: $dark-secondary;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    .step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+      background-color: $neutral-color;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .step-number {
+        width: 60px;
+        height: 60px;
+        background-color: $primary-color;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+
+      .step-content {
+        text-align: center;
+
+        h3 {
+          font-size: 1.5rem;
+          color: $secondary-color;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 1rem;
+          color: $dark-secondary;
+        }
+      }
+    }
+  }
+}
